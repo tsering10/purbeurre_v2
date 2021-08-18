@@ -60,8 +60,19 @@ In your Django settings.py
     }
 }
 ```
+## 3. Configure Gmail SMTP server:
+* under your settings.py file you need to add the following settings
 
-## 3. Getting Started
+```bash
+EMAIL_BACKEND = ‘django.core.mail.backends.smtp.EmailBackend’
+EMAIL_HOST = ‘smtp.gmail.com’
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = ‘your_account@gmail.com’
+EMAIL_HOST_PASSWORD = ‘your account’s password’
+```
+
+## 4. Getting Started
 
 1. Setup project environment with [virtualenv](https://virtualenv.pypa.io) and [pip](https://pip.pypa.io).
 2. you can clone or fork the git repo
@@ -77,7 +88,7 @@ $ python manage.py runserver
 ```
 Then go to localhost:8000 or 127.0.0.1:8000, and the app should be launched and usable there.
 
-## 4. Tests
+## 5. Tests
 
 To run the tests, cd into the directory where manage.py is:
 
