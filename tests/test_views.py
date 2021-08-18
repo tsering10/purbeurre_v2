@@ -110,11 +110,6 @@ class RegistrationPageTestCase(TestCase):
         response = self.client.get(reverse('users:sign_up'))
         self.assertContains(response, 'csrfmiddlewaretoken')
 
-    # def test_user_authentication(self):
-    #     response = self.client.get(self.home_url)
-    #     user = response.context.get('user')
-    #     self.assertTrue(user.is_authenticated)
-
     def test_contains_form(self):
         """ test for sign up form """
         response = self.client.get(reverse('users:sign_up'))
@@ -264,7 +259,6 @@ class SearchPageTestCase(TestCase):
         )
 
         Products.objects.create(
-
             id_product=2,
             product_name="Nocciolata",
             category=category,
@@ -290,7 +284,6 @@ class SearchPageTestCase(TestCase):
     def test_random_list_of_products_if_no_query(self):
         # Test that an empty query returns to a page displaying a certain message and suggests products
         response = self.client.get(
-
             reverse('purbeurre:search'), {"query": ""}
 
         )
@@ -301,7 +294,7 @@ class AuthenticationTests(StaticLiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        base_dir = "/home/tashitsering/Documents/my staff/openclassrooms/OPEN_CLASS_PROJECT/Project_11/tests"
+        base_dir = "/home/tashitsering/Documents/my staff/openclassrooms/OPEN_CLASS_PROJECT/Project_11_git/tests"
         cls.selenium = WebDriver(executable_path=f"{base_dir}/geckodriver")
         cls.selenium.implicitly_wait(10)
 
