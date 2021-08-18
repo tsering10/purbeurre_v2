@@ -2,6 +2,8 @@
 
 This app lets a user search for a product and suggests similar healthier products. Users can save their favorite product in their account. The product data are collected from OpenFoodFacts(https://fr.openfoodfacts.org/). The app is available both in English and French. 
 
+### French language
+![Pur Beurre French](https://github.com/tsering10/purbeurre_v2/blob/main/static/purbeurre/img/fr.png)
 ## 1. Requirements :
 
 * Python 3.x (you can install [python](https://www.python.org/downloads/))
