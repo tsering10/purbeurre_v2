@@ -7,9 +7,6 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.contrib import messages
 from django.utils.translation import ugettext_lazy as _
 
-# from django.contrib.auth import login, authenticate
-# from purbeurre.forms import SignUpForm
-
 # Create your views here.
 
 def index(request):
