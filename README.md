@@ -4,6 +4,9 @@ This app lets a user search for a product and suggests similar healthier product
 
 ### French language
 ![Pur Beurre French](https://github.com/tsering10/purbeurre_v2/blob/main/static/purbeurre/img/fr.png)
+### English language
+![Pur Beurre English](https://github.com/tsering10/purbeurre_v2/blob/main/static/purbeurre/img/en.png)
+
 ## 1. Requirements :
 
 * Python 3.x (you can install [python](https://www.python.org/downloads/))
