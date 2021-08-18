@@ -7,6 +7,33 @@ This app lets a user search for a product and suggests similar healthier product
 ### English language
 ![Pur Beurre English](https://github.com/tsering10/purbeurre_v2/blob/main/static/purbeurre/img/en.png)
 
+### Setting up Django internationalisation
+Add english language via internationalisation settings by this way:
+
+#### settings.py :
+* import **unittext_lazy** translation method;
+* set **LocaleMiddleware** between CommonMiddleware and SessionMiddleware;
+* add supported english language code **'en',_ ('English');**
+* add LOCALE_PATHS **local** as a folder where find translations.
+
+#### urls.py :
+* import **i18n_patterns** function;
+* divid admin urls from others;
+* add language codes in PurBeurre website URLs.
+
+#### views.py :
+* import **unittext_lazy** translation method;
+* mark all wanted items to translate;
+
+#### html files :
+* import label tag **{% load i18n %}** to activate translation;
+* mark all wanted items by **{% trans "" %}** label tag.
+
+#### create django.po / django.mo files :
+* run `django-admin makemessages -l en` command from application root folder;
+* make translations in **django.po** file;
+* run `django-admin compilemessages` command from project root to create optimized **django.mo** file.
+
 ## 1. Requirements :
 
 * Python 3.x (you can install [python](https://www.python.org/downloads/))
