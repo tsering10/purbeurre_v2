@@ -9,7 +9,6 @@ from users.views import account as profile
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from purbeurre.forms import UserCreationForm
 from django.test import LiveServerTestCase
-from selenium import webdriver
 from selenium.webdriver.firefox.webdriver import WebDriver
 
 
