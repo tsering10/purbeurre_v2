@@ -11,7 +11,6 @@ from purbeurre.forms import UserCreationForm
 from django.test import LiveServerTestCase
 from selenium.webdriver.firefox.webdriver import WebDriver
 
-
 class IndexPageTestCase(TestCase):
 
     # test that index returns a 200
@@ -245,8 +244,8 @@ class SavedTestPageCase(TestCase):
             "replacement": self.replacement.id_product,
         })
         self.assertTrue(Substitutes.objects.exists())
-
-
+   
+ 
 class SearchPageTestCase(TestCase):
     def setUp(self):
         category = Categories.objects.create(category_name="Pâte à tartiner")
@@ -287,6 +286,27 @@ class SearchPageTestCase(TestCase):
 
         )
         self.assertIn(b'Suggestion de produits', response.content)
+
+# Translations
+class TraductionTest(StaticLiveServerTestCase):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        base_dir = "/home/tashitsering/Documents/my staff/openclassrooms/OPEN_CLASS_PROJECT/Project_11_git/tests"
+        cls.selenium = WebDriver(executable_path=f"{base_dir}/geckodriver")
+        cls.selenium.implicitly_wait(10)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.selenium.quit()
+        super().tearDownClass()
+
+    def test_lang(self):
+        for lang,h1_text in [('fr', 'Du gras, oui, mais de qualité !'),('en', 'Fat, yes, but of quality !')]:
+            self.selenium.get("%s%s" % (self.live_server_url, "/{}".format(lang)))
+            h1 = self.selenium.find_element_by_tag_name("h1")
+            print(h1.text)
+            self.assertEqual(h1.text, h1_text)
 
 
 class AuthenticationTests(StaticLiveServerTestCase):
