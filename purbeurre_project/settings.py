@@ -35,7 +35,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = True
 
-# ALLOWED_HOSTS = ['tsering-purbeurre.herokuapp.com']
+# ALLOWED_HOSTS = ['purbeurre-bilingual.herokuapp.com']
 
 ALLOWED_HOSTS = ["localhost","127.0.0.1"]
 
@@ -117,8 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Internationalization
-# https://docs.djangoproject.com/en/3.2/topics/i18n/
+# Internationalization https://docs.djangoproject.com/en/3.2/topics/i18n/
 # Supported languages
 LANGUAGES = (
     ('fr', _('French')),

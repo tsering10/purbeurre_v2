@@ -40,7 +40,6 @@ media
 
 # Backup files # 
 *.bak 
-
 # geckodriver
 geckodriver.log
 tests/geckodriver
