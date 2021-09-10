@@ -31,6 +31,10 @@ class ProductsTestCase(TestCase):
         return Products.objects.create(id_product=1, product_name="nutella", url="http://", img="http://",
                                        nutrition_score="e", category=cat)
 
+    def test_category_str(self):
+        category = self.create_categories()
+        self.assertEqual(str(category[0]), "Pâtes à tartiner")
+    
     def test_id_product(self):
         # test product id
         nutella = self.create_products()
@@ -47,30 +51,3 @@ class ProductsTestCase(TestCase):
         # test nutrition score
         nutella = self.create_products()
         self.assertEqual('e', nutella.nutrition_score)
-
-
-class TestModels(TestCase):
-    def test_create_simple_user_without_email(self):
-        message = "Users must have an email address"
-        with self.assertRaisesMessage(ValueError, message):
-            User.objects.create_user(
-                username="inconnu",
-                email="",
-                password="1234AZERTY",
-            )
-
-    def test_simple_user_not_admin_str(self):
-        user = User.objects.create_user(
-            username="inconnu",
-            email="inconnu@gmail.com",
-            password="1234AZERTY",
-        )
-        self.assertIs(user.is_admin, False)
-
-    def test_superuser_is_admin_str(self):
-        superuser = User.objects.create_superuser(
-            username="inconnu",
-            email="inconnu@gmail.com",
-            password="1234AZERTY",
-        )
-        self.assertIs(superuser.is_admin, True)
