@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-04 17:54+0200\n"
+"POT-Creation-Date: 2021-09-09 21:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1181,15 +1181,15 @@ msgid "Nous contacter"
 msgstr "Contact us"
 
 #: purbeurre/views.py:134 purbeurre/views.py:135 templates/base.html:79
-#: templates/purbeurre/base.html:79
+#: templates/purbeurre/base.html:76
 msgid "Mentions légales"
 msgstr "Legal Notice"
 
-#: purbeurre_project/settings.py:121
+#: purbeurre_project/settings.py:124
 msgid "French"
 msgstr ""
 
-#: purbeurre_project/settings.py:122
+#: purbeurre_project/settings.py:125
 msgid "English"
 msgstr ""
 
@@ -1205,7 +1205,7 @@ msgstr ""
 "The product you are looking for is not yet in our database. Perform another "
 "search"
 
-#: templates/base.html:45 templates/purbeurre/base.html:45
+#: templates/base.html:45 templates/purbeurre/base.html:44
 msgid "chercher un produit"
 msgstr "search a product"
 
@@ -1324,7 +1324,7 @@ msgstr "Suggested products"
 msgid "Créez votre Compte"
 msgstr "Create your account"
 
-#: templates/purbeurre/sign_up.html:31 users/views.py:40
+#: templates/purbeurre/sign_up.html:31 users/views.py:37
 msgid "S'enregistrer"
 msgstr "Register"
 
@@ -1341,10 +1341,8 @@ msgid "Se Connecter"
 msgstr "login"
 
 #: templates/registration/login.html:33
-#, fuzzy
-#| msgid "Mot de passe"
 msgid "Mot de passe oublié"
-msgstr "Password"
+msgstr "Forgot password"
 
 #: templates/registration/login.html:34
 #: templates/registration/password_reset_complete.html:15
@@ -1368,54 +1366,63 @@ msgid "Mise à jour de votre mot de votre passe"
 msgstr "Update your password"
 
 #: templates/registration/password_reset.html:28
+#: templates/registration/password_reset_confirm.html:21
 msgid "Mettre à jour"
 msgstr "Update"
 
 #: templates/registration/password_reset_complete.html:15
 msgid "Votre mot de passe a bien été réinitialisé"
-msgstr "Your password has been set"
+msgstr "Your password has been successfully reset"
 
-#: templates/registration/password_reset_confirm.html:18
-#, fuzzy
-#| msgid "Confirmation de votre de passe"
+#: templates/registration/password_reset_complete.html:15
+msgid "ici"
+msgstr "here"
+
+#: templates/registration/password_reset_confirm.html:17
 msgid "Mise à jour de votre mot de passe"
-msgstr "Confirmation of your password"
+msgstr "Update your password"
 
-#: templates/registration/password_reset_confirm.html:25
+#: templates/registration/password_reset_confirm.html:24
 msgid ""
 "Le lien de réinitialisation du mot de passe n'était pas valide, peut-être "
 "parce qu'il a déjà été utilisé. Veuillez demander une nouvelle "
 "réinitialisation de mot de passe"
-msgstr "The password reset link was invalid, possibly because it has already been used. Please request a new password reset"
+msgstr ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset"
 
 #: templates/registration/password_reset_done.html:17
 msgid ""
 "Nous vous avons envoyé par e-mail des instructions pour définir votre mot de "
 "passe, si un compte existe avec l'e-mail que vous avez entré. Vous devriez "
 "les recevoir sous peu"
-msgstr "We've emailed you instructions for setting your password, if an account exists with the email you entered. You should receive them shortly"
+msgstr ""
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly"
 
 #: templates/registration/password_reset_done.html:20
 msgid ""
 "Si vous ne recevez pas d'e-mail, assurez-vous d'avoir entré l'adresse avec "
 "laquelle vous vous êtes inscrit et vérifiez votre dossier spam"
-msgstr "If you don't receive an email, please make sure you've entered the address you registered with,and check your spam folder"
+msgstr ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with,and check your spam folder"
 
 #: users/models.py:38
 msgid "email address"
 msgstr "email"
 
-#: users/views.py:39
+#: users/views.py:36
 #, fuzzy
 #| msgid "Déjà un compte"
 msgid "Créer un compte"
 msgstr "Already have an account"
 
-#: users/views.py:76
+#: users/views.py:73
 msgid "Vos Favoris"
 msgstr "Your favorites"
 
-#: users/views.py:90
+#: users/views.py:87
 #, fuzzy
 #| msgid "Déjà un compte"
 msgid "Votre compte"

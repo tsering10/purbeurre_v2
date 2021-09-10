@@ -22,14 +22,6 @@ from django.utils.translation import gettext_lazy as _
 from django.contrib.auth import views as auth_views
 
 
-# urlpatterns = [
-#     # home route
-#     path("", views.index, name="index"),
-#     url(r'^purbeurre/', include(('purbeurre.urls', 'purbeurre'), namespace='purbeurre')),
-#     path('users/', include('users.urls', namespace="users")),
-#     path('admin/', admin.site.urls),
-# ]
-
 urlpatterns = [
     path(_('admin/'), admin.site.urls),
     path("", views.index, name="index"),
@@ -45,6 +37,8 @@ urlpatterns += i18n_patterns(
     re_path(r'^purbeurre/', include(('purbeurre.urls', 'purbeurre'), namespace='purbeurre')),
     path('users/', include('users.urls', namespace="users")),
     path("password-reset/done",auth_views.PasswordResetDoneView.as_view(template_name="registration/password_reset_done.html"),name="password_reset_done",),
+    path("password_reset/complete",auth_views.PasswordResetCompleteView.as_view(template_name="registration/password_reset_complete.html",),name="password_reset_complete",),
+
 
     
 )
