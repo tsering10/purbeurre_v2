@@ -305,7 +305,7 @@ class TraductionTest(StaticLiveServerTestCase):
         for lang,h1_text in [('fr', 'Du gras, oui, mais de qualité !'),('en', 'Fat, yes, but of quality !')]:
             self.selenium.get("%s%s" % (self.live_server_url, "/{}".format(lang)))
             h1 = self.selenium.find_element_by_tag_name("h1")
-            print(h1.text)
+            #print(h1.text)
             self.assertEqual(h1.text, h1_text)
 
 
